@@ -26,7 +26,8 @@
         </style>
     </head>
     <body class="antialiased">
-        @php 
+        <x-app-layout></x-app-layout>
+        <!-- @php 
             $color = 'danger';
             $alert = 'alert';
         @endphp
@@ -48,6 +49,6 @@
                 titulo
             </x-slot>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eos cumque atque provident libero aperiam mollitia dicta, asperiores quod, praesentium eligendi dolorem inventore repudiandae saepe est quia aspernatur iusto. Quae?
-        </x-dynamic-component>
+        </x-dynamic-component> -->
     </body>
 </html>
