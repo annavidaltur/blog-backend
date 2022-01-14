@@ -58,4 +58,21 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // Relación uno a uno (1:1)
+    public function profile(){
+        // Opció 1 
+        // $profile = Profile::where('user_id', $this->id)->first();         
+        // return $profile;
+
+        // Opció 2
+        // return $this->hasOne(Profile::class);
+
+        // Opció 3 - no cal importar el model profile en el use de dalt
+        return $this->hasOne('App\Models\Profile');
+    }
+
+    public function video(){
+        return $this->hasOne('App\Models\Video');
+    }
 }
