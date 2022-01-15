@@ -72,7 +72,12 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
 
-    public function video(){
-        return $this->hasOne('App\Models\Video');
+    // Relación uno a muchos (1:n)
+    public function posts(){        
+        return $this->hasMany('App\Models\Post');
+    }
+
+    public function videos(){        
+        return $this->hasMany('App\Models\Video');
     }
 }
