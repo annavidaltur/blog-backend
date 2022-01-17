@@ -85,4 +85,9 @@ class User extends Authenticatable
     public function roles(){
         return $this->belongsToMany('App\Models\Role');
     }
+
+    // Relación uno a uno polimórfica
+    public function image(){
+        return $this->morphOne('App\Models\Image', 'imageable');
+    }
 }
