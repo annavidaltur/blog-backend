@@ -18,4 +18,9 @@ class Video extends Model
     public function comments(){
         return $this->morphMany('App\Models\Comment', 'commentable');
     }
+
+    // Relación muchos a muchos polimórfica
+    public function tags(){
+        return $this->morphToMany('App\Models\Tag', 'taggable');
+    }
 }
